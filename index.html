@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SECRET [ 同人音楽サークル ]</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(45deg, #fff59c, hsl(28, 100%, 75%), #f8c842);
+      background-size: 200% 200%;
+      animation: bggradient 12s ease infinite;
+      background-attachment: fixed;
+
+    }
+
+    @keyframes bggradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .full-screen-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .container {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .show {
+      opacity: 1;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      padding: 10px 0;
+      z-index: 1;
+      user-select: none;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .navbar ul li {
+      display: inline-block;
+      margin-right: 13px;
+    }
+
+    .navbar ul li a {
+      color: #faa831;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px;
+      transition: color 0.2s;
+    }
+
+    .navbar ul li a:hover {
+      color: #faaa3187;
+    }
+
+    .logo_fullscreen {
+      width: 750px;
+      position: relative;
+      display: block;
+      margin: 100px;
+      margin-top: 150px;
+      margin-bottom: 150px;
+
+    }
+
+    .fullscreen_header-in {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+    }
+
+    .full-screen-logo {
+      position: absolute;
+      width: 730px;
+      max-width: 73%;
+      max-height: 73%;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .bgcolor {
+      background-color: white;
+
+    }
+
+    .box {
+      margin: 5px;
+      padding: 6px;
+      width: 730px;
+      max-width: 92%;
+      max-height: 73%;
+
+    }
+
+    .box2 {
+      margin: 5px;
+      padding: 6px;
+      width: 730px;
+      max-width: 92%;
+      max-height: 73%;
+      background: rgba(255, 200, 0, 0.251);
+      border-radius: 15px;
+    }
+
+    .br {
+      display: none;
+    }
+
+    @media screen and (max-width: 375px) {
+      .br {
+        display: block;
+      }
+    }
+
+    h2 {
+      color: #faa831;
+    }
+
+    .member {
+      background: #faaa3188;
+      width: 290px;
+      height: 52px;
+      padding: 4px;
+      margin: 4px;
+      display: flex;
+      border-radius: 10px;
+    }
+
+    .member-img {
+      width: 50px;
+      border: 1px solid white;
+      border-radius: 35px;
+      height: 50px;
+    }
+
+    .member-list {
+      width: 100%;
+
+    }
+
+    .member-text {
+      margin-left: 7px;
+      color: rgba(0, 0, 0, 0.548);
+    }
+
+    p a {
+      text-decoration: none;
+      color: rgb(234, 156, 55);
+    }
+
+    a:hover {
+      opacity: 0.5;
+      transition: .2s;
+    }
+
+    a {
+      opacity: 1;
+      transition: .2s;
+    }
+
+    footer {
+        color: white;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="fullscreen_header">
+      <div class="fullscreen_header-in">
+        <img src="logo.png" alt="SECRET" class="full-screen-logo">
+      </div>
+    </div>
+  </div>
+  <div class="bgcolor">
+    <div class="navbar">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#member">Member</a></li><br class="br"><br class="br">
+        <li><a href="#release">Release</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <center>
+      <div class="box"> <!-- スクロールするための余白を作成 -->
+        <h2 id="about">About</h2>
+        <p>同人音楽サークル。総勢30名のメンバーの楽曲を中心に発信。DTMに関する企画動画も配信予定。</p>
+      </div>
+    </center>
+    <center>
+      <div class="box"> <!-- スクロールするための余白を作成 -->
+        <h2 id="member">Member</h2>
+    </center>
+    <center>
+      <div class="member-list">
+        <div class="member">
+          <a href="https://twitter.com/Minotan1116" target="_blank"><img src="member_image/1.png" class="member-img"
+              align="left"></a>
+          <p class="member-text">みのたん（主宰）</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/kyandyBGM" target="_blank"><img src="member_image/2.jpeg" class="member-img"
+              align="left"></a>
+          <p class="member-text">Kyandy BGM</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/toffu102" target="_blank"><img src="member_image/3.jpg" class="member-img"
+              align="left"></a>
+          <p class="member-text">ToffU / トッフ</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/KatoMudonex" target="_blank"><img src="member_image/4.png" class="member-img"
+              align="left"></a>
+          <p class="member-text">かとうどん</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/iamastroouo" target="_blank"><img src="member_image/5.png" class="member-img"
+              align="left"></a>
+          <p class="member-text">Astro</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/HoshiroNari" target="_blank"><img src="member_image/6.jpg" class="member-img"
+              align="left"></a>
+          <p class="member-text">XH</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/VirgoTheVampire" target="_blank"><img src="member_image/7.png" class="member-img"
+              align="left"></a>
+          <p class="member-text">Lillie Virgo</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/UMARu19114" target="_blank"><img src="member_image/8.jpg" class="member-img"
+              align="left"></a>
+          <p class="member-text">ゆーまる／UMARu</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/s4lm0ne1t_music" target="_blank"><img src="member_image/9.png" class="member-img"
+              align="left"></a>
+          <p class="member-text">S4LM0NE1T</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/ryuroido" target="_blank"><img src="member_image/10.png" class="member-img"
+              align="left"></a>
+          <p class="member-text">Ryuroido</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/R_oa1204dtm" target="_blank"><img src="member_image/11.jpg" class="member-img"
+              align="left"></a>
+          <p class="member-text">R-oa</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/ameagari_fuhto" target="_blank"><img src="member_image/12.png" class="member-img"
+              align="left"></a>
+          <p class="member-text">AmeAgari_風斗</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/se1ene_music" target="_blank"><img src="member_image/13.jpeg" class="member-img"
+              align="left"></a>
+          <p class="member-text">Se1ene</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/yujyonnnnu" target="_blank"><img src="member_image/14.jpeg" class="member-img"
+              align="left"></a>
+          <p class="member-text">芝田</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/ZumaTK_P" target="_blank"><img src="member_image/15.jpeg" class="member-img"
+              align="left"></a>
+          <p class="member-text">ZumaTK</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/DJ_KorDai_HARD" target="_blank"><img src="member_image/16.jpeg"
+              class="member-img" align="left"></a>
+          <p class="member-text">DJ KorDai</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/uRyo99515" target="_blank"><img src="member_image/17.png" class="member-img"
+              align="left"></a>
+          <p class="member-text">uRyo</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/haiiro81161682" target="_blank"><img src="member_image/18.jpeg"
+              class="member-img" align="left"></a>
+          <p class="member-text">はいいろ</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/9kyumao" target="_blank"><img src="member_image/19.jpeg" class="member-img"
+              align="left"></a>
+          <p class="member-text">玖毛/9MAO</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/t404_null" target="_blank"><img src="member_image/20.jpeg" class="member-img"
+              align="left"></a>
+          <p class="member-text">t404:null</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/jiubii0108" target="_blank"><img src="member_image/21.jpeg" class="member-img"
+              align="left"></a>
+          <p class="member-text">ラマ</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/Glass_Composer" target="_blank"><img src="member_image/22.jpg" class="member-img"
+              align="left"></a>
+          <p class="member-text">ガラス瓶</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/Raposan_Music" target="_blank"><img src="member_image/23.jpeg" class="member-img"
+              align="left"></a>
+          <p class="member-text">らぽさん / Raposan</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/Latihart_VT" target="_blank"><img src="member_image/24.png" class="member-img"
+              align="left"></a>
+          <p class="member-text">稲狐夜憑宵</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/BIG_SOSTW" target="_blank"><img src="member_image/25.png" class="member-img"
+              align="left"></a>
+          <p class="member-text">ɃƗǤ_SØS</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/masa_ma5a" target="_blank"><img src="member_image/26.jpeg" class="member-img"
+              align="left"></a>
+          <p class="member-text">masa*</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/fullmar4989" target="_blank"><img src="member_image/27.jpeg" class="member-img"
+              align="left"></a>
+          <p class="member-text">fullmar</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/BIG_Mt_mountain" target="_blank"><img src="member_image/28.jpeg"
+              class="member-img" align="left"></a>
+          <p class="member-text">山</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/kinak0_ne0" target="_blank"><img src="member_image/default.png"
+              class="member-img" align="left"></a>
+          <p class="member-text">きなこ</p>
+        </div>
+        <div class="member">
+          <a href="https://twitter.com/NeOFeSAgITeNSeP" target="_blank"><img src="member_image/30.jpeg"
+              class="member-img" align="left"></a>
+          <p class="member-text">sensen</p>
+        </div>
+
+
+      </div>
+    </center>
+
+    <center>
+      <div class="box"> <!-- スクロールするための余白を作成 -->
+        <h2 id="release">Release</h2>
+        <p>リリースはまだありません</p>
+      </div>
+    </center>
+
+    <center>
+      <div class="box2"> <!-- スクロールするための余白を作成 -->
+        <h2 id="contact">Contact</h2>
+        <p>何か不明なことなどがありましたら、
+          <a href="https://twitter.com/_SECRET_Team_/" target="_blank">XのDM<img src="newtab.png" width="20px"
+              align="center"></a>までお願いいたします。<br>また、現在はメンバー募集しておりません。
+        </p>
+      </div>
+    </center>
+    <br><br><br>
+
+    <center>
+      <a href="https://twitter.com/_SECRET_Team_/"><img
+          src="https://nattobgm.github.io/web/assets/img/icons/twitter-icon.png" style="-webkit-filter: brightness(0);"
+          width="23px"></a>
+    </center>
+    <br><br><br>
+  </div>
+    <footer>
+      <center>
+        ©️ 2024 SECRET[同人音楽サークル]<br><br><br>
+      </center>
+    </footer>
+
+  <script>
+    // Function to handle fade-in effect of container
+    function handleScroll() {
+      var containers = document.querySelectorAll('.container');
+      containers.forEach(function (container) {
+        var position = container.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+        if (position < windowHeight * 0.9) { // Adjust the threshold as needed
+          container.classList.add('show');
+        }
+      });
+    }
+
+    // Triggering initial fade-in animation on page load
+    window.onload = function () {
+      handleScroll();
+    };
+
+    // Adding event listener for scroll to trigger fade-in effect
+    window.addEventListener('scroll', handleScroll);
+  </script>
+
+</body>
+
+</html>
