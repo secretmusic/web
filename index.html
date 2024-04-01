@@ -16,7 +16,7 @@
     body {
       width: 100%;
       height: 100vh;
-      background: linear-gradient(45deg, #fff6a9, hsl(28, 100%, 81%), #ecd28b);
+      background: linear-gradient(45deg, #faa831, #ffcc7e, #faa831);
       background-size: 200% 200%;
       animation: bggradient 4s ease infinite;
       background-attachment: fixed;
@@ -49,12 +49,8 @@
     }
 
     .container {
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .show {
       opacity: 1;
+      transition: opacity 1s ease-in-out;
     }
 
     .navbar {
@@ -203,6 +199,9 @@
         margin-top: 30px;
         margin-bottom: 30px;
     }
+    ::selection {
+    background: #faaa315a;
+}
   </style>
 </head>
 
@@ -212,7 +211,7 @@
   <div class="container">
     <div class="fullscreen_header">
       <div class="fullscreen_header-in">
-        <img src="logo.png" alt="SECRET" class="full-screen-logo">
+        <img src="logo.svg" alt="SECRET" class="full-screen-logo">
       </div>
     </div>
   </div>
@@ -412,7 +411,7 @@
     <br><br><br>
 
     <center>
-      <a href="https://twitter.com/_SECRET_Team_/"><img
+      <a href="https://twitter.com/_SECRET_Team_/" target="_blank"><img
           src="https://nattobgm.github.io/web/assets/img/icons/twitter-icon.png" style="-webkit-filter: brightness(0);"
           width="23px"></a>
     </center>
@@ -423,29 +422,6 @@
         ©️ 2024 SECRET[同人音楽サークル]<br><br><br>
       </center>
     </footer>
-
-  <script>
-    // Function to handle fade-in effect of container
-    function handleScroll() {
-      var containers = document.querySelectorAll('.container');
-      containers.forEach(function (container) {
-        var position = container.getBoundingClientRect().top;
-        var windowHeight = window.innerHeight;
-        if (position < windowHeight * 0.9) { // Adjust the threshold as needed
-          container.classList.add('show');
-        }
-      });
-    }
-
-    // Triggering initial fade-in animation on page load
-    window.onload = function () {
-      handleScroll();
-    };
-
-    // Adding event listener for scroll to trigger fade-in effect
-    window.addEventListener('scroll', handleScroll);
-  </script>
-
 </body>
 
 </html>
